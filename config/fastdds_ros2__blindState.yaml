@@ -1,0 +1,54 @@
+types:
+    idls:
+        - >
+            struct BlindStateMsg
+            {
+                // Header
+                string frame_id;
+                unsigned long sequence_id;
+                double timestamp;
+
+                string robot_name;
+
+                string joints_name[12];
+                double joints_position[12];
+                double joints_velocity[12];
+                double joints_acceleration[12];
+                double joints_effort[12];
+                double joints_temperature[12];
+
+                double feet_contact[4];
+                double current_feet_positions[12];
+            };
+
+systems:
+    dds: 
+        type: fastdds
+        participant:
+            file_path: ./dds_participant_config_signals_server.xml
+            profile_name: participant_server_discovery_protocol
+    ros2:
+        type: ros2
+
+routes:
+    dds_to_ros2: { from: dds, to: ros2 }
+    ros2_to_dds: { from: ros2, to: dds }
+
+topics:
+    blind_state_dds: {
+        type: "dls2_msgs/BlindStateMsg",
+        route: ros2_to_dds,
+        remap: {
+            dds: { type: BlindStateMsg, topic: blind_state },
+            ros2: { topic: "dls2/blind_state" }
+        }
+    }
+
+    blind_state_ros2: {
+        type: "dls2_msgs/BlindStateMsg",
+        route: dds_to_ros2,
+        remap: {
+            dds: { type: BlindStateMsg, topic: blind_state },
+            ros2: { topic: "dls2/blind_state" }
+        }
+    }
