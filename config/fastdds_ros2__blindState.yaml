@@ -25,7 +25,7 @@ systems:
     dds: 
         type: fastdds
         participant:
-            file_path: ./dds_participant_config_signals_server.xml
+            file_path: /opt/integration_service/dls2_ros2_bridge/config/dds_participant_config_signals_server.xml
             profile_name: participant_server_discovery_protocol
     ros2:
         type: ros2
