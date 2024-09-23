@@ -37,3 +37,6 @@ This repositories also contains the ros2 messages corresponding to off-the-shelf
     - launch the integration_service using one of the available yaml file in /opt/integration_service/dls2_ros2_bridge/config
         
         `integration-service $DEFAULT_CONFIG/<file_name>.yaml`
+
+# Examples
+The examples folder provides a set of example to interface a ROS2 node with DLS2.
