@@ -11,3 +11,29 @@ Bridging dls2 with ros2 means letting dds (currently fastdds) communicate with r
 You can find an example about bridging fastdds with ros2 [here](https://integration-service.docs.eprosima.com/en/latest/examples/different_protocols/pubsub/dds-ros2.html).
 
 This repositories also contains the ros2 messages corresponding to off-the-shelf dls2 ones and the corresponding .yaml configuration files. Notice that these files uses a .xml file for configuring the domain participants as CLIENTS for SERVERS. So it is assumed that dls2 uses the [Discovery Server](https://fast-dds.docs.eprosima.com/en/latest/fastdds/discovery/discovery_server.html#discovery-server) mechanism, with servers having specific ip, port and GUID.
+
+
+# Procedure to launch the integration service DLS2-ROS2
+- pull the integration service image
+    `docker pull server-harbor:80/dls2/dls2-integration_service-ros`
+- open the image
+    `dls-docker.py --api run -f -nv -fx -e DLS=2 -ex server-harbor:80/dls2/dls2-integration_service-ros`
+- source the integration service and ROS2
+    source /opt/integration_service/setup.bash
+- if you have a **new custom message**
+    - compile and source the package containing your ros2 message
+    - create a .mix file used by the integration service to interpret your ros2 message
+
+        `create_ros2_mix_files <name of the package where your message is>`
+    - source the .mix files
+        source /opt/integration_service/ros2_sh_ws/install/setup.bash
+    - create an .idl file corresponding to the .msg file of your ros2 message (e.g. [blind_state](https://gitlab.advr.iit.it/dls-lab/dls_messages/-/blob/master/idls/blind_state.idl))
+    - create a .yaml configuration file used by the integration service (e.g [blind_state](https://gitlab.advr.iit.it/dls-lab/dls2_ros2_bridge/-/blob/master/config/fastdds_ros2__blindState.yaml))
+        - in the yaml file, the _paths_ field is the path to the folder containing your idl file
+    - launch the integration service
+
+        `integration-service <path_to_your_yaml_configuration_file>.yaml`
+- if you need to use **off-the-shelf messages**
+    - launch the integration_service using one of the available yaml file in /opt/integration_service/dls2_ros2_bridge/config
+        
+        `integration-service $DEFAULT_CONFIG/<file_name>.yaml`
