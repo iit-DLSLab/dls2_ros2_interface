@@ -47,17 +47,19 @@ in each of them.
 Now, each of the terminal will launch an integration service for a specific topic. The commands are the following
 
 - blind_state topic
-
+    ```
     integration-service $DEFAULT_CONFIG/fastdds_ros2__blindState.yaml
+    ```
 
 - trajectory_generator topic
-
+    ```
     integration-service $DEFAULT_CONFIG/fastdds_ros2__trajectoryGenerator.yaml
+    ```
 
 - /dls2/pid topic
-
+    ```
     integration-service dls2_ros2_bridge/examples/pid_ws/fastdds_ros2__pid.yaml
-
+    ```
 ## Runing the ROS2 pid controller
 We can now finally launch the ros2 pid. Open the image you have used to compile the ros2 package. Then
 
