@@ -28,6 +28,7 @@ find_package(rosidl_default_generators REQUIRED)
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/BlindStateMsg.msg"
   "msg/BaseStateMsg.msg"
+  "msg/ControlSignalMsg.msg"
 )
 
 ament_package()
