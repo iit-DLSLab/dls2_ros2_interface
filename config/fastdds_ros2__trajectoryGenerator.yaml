@@ -20,19 +20,19 @@ routes:
 
 topics:
     trajectory_generator_dds: {
-        type: "dls2_msgs/TrajectoryGenerator",
+        type: "dls2_msgs/TrajectoryGeneratorMsg",
         route: ros2_to_dds,
         remap: {
-            dds: { type: TrajectoryGenerator, topic: trajectory_generator },
+            dds: { type: TrajectoryGeneratorMsg, topic: trajectory_generator },
             ros2: { topic: "dls2/trajectory_generator" }
         }
     }
 
     trajectory_generator_ros2: {
-        type: "dls2_msgs/TrajectoryGenerator",
+        type: "dls2_msgs/TrajectoryGeneratorMsg",
         route: dds_to_ros2,
         remap: {
-            dds: { type: TrajectoryGenerator, topic: trajectory_generator },
+            dds: { type: TrajectoryGeneratorMsg, topic: trajectory_generator },
             ros2: { topic: "dls2/trajectory_generator" }
         }
     }
