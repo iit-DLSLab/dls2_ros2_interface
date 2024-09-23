@@ -1,0 +1,22 @@
+[35m[1mConsolidate compiler generated dependencies of target pid[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/pid.dir/src/pid.cpp.o[0m
+[100%] [32m[1mLinking CXX executable pid[0m
+[100%] Built target pid
+-- Install configuration: ""
+-- Installing: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/lib/pid/pid
+-- Set runtime path of "/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/lib/pid/pid" to ""
+-- Installing: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/ament_index/resource_index/package_run_dependencies/pid
+-- Installing: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/ament_index/resource_index/parent_prefix_path/pid
+-- Installing: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/environment/ament_prefix_path.sh
+-- Installing: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/environment/ament_prefix_path.dsv
+-- Installing: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/environment/path.sh
+-- Installing: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/environment/path.dsv
+-- Installing: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/local_setup.bash
+-- Installing: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/local_setup.sh
+-- Installing: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/local_setup.zsh
+-- Installing: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/local_setup.dsv
+-- Installing: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/package.dsv
+-- Installing: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/ament_index/resource_index/packages/pid
+-- Installing: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/cmake/pidConfig.cmake
+-- Installing: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/cmake/pidConfig-version.cmake
+-- Installing: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/package.xml

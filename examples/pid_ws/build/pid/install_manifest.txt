@@ -1,0 +1,16 @@
+/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/lib/pid/pid
+/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/ament_index/resource_index/package_run_dependencies/pid
+/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/ament_index/resource_index/parent_prefix_path/pid
+/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/environment/ament_prefix_path.sh
+/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/environment/ament_prefix_path.dsv
+/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/environment/path.sh
+/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/environment/path.dsv
+/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/local_setup.bash
+/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/local_setup.sh
+/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/local_setup.zsh
+/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/local_setup.dsv
+/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/package.dsv
+/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/ament_index/resource_index/packages/pid
+/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/cmake/pidConfig.cmake
+/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/cmake/pidConfig-version.cmake
+/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/package.xml

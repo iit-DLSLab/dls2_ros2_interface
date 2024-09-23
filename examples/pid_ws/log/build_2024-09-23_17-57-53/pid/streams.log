@@ -1,0 +1,26 @@
+[0.013s] Invoking command in '/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/build/pid': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/build/pid -- -j20 -l20
+[0.069s] [35m[1mConsolidate compiler generated dependencies of target pid[0m
+[0.092s] [ 50%] [32mBuilding CXX object CMakeFiles/pid.dir/src/pid.cpp.o[0m
+[10.842s] [100%] [32m[1mLinking CXX executable pid[0m
+[11.358s] [100%] Built target pid
+[11.375s] Invoked command in '/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/build/pid' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/build/pid -- -j20 -l20
+[11.419s] Invoking command in '/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/build/pid': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/build/pid
+[11.430s] -- Install configuration: ""
+[11.430s] -- Installing: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/lib/pid/pid
+[11.436s] -- Set runtime path of "/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/lib/pid/pid" to ""
+[11.436s] -- Up-to-date: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/ament_index/resource_index/package_run_dependencies/pid
+[11.436s] -- Up-to-date: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/ament_index/resource_index/parent_prefix_path/pid
+[11.437s] -- Up-to-date: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/environment/ament_prefix_path.sh
+[11.437s] -- Up-to-date: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/environment/ament_prefix_path.dsv
+[11.437s] -- Up-to-date: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/environment/path.sh
+[11.437s] -- Up-to-date: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/environment/path.dsv
+[11.437s] -- Up-to-date: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/local_setup.bash
+[11.437s] -- Up-to-date: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/local_setup.sh
+[11.437s] -- Up-to-date: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/local_setup.zsh
+[11.437s] -- Up-to-date: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/local_setup.dsv
+[11.437s] -- Installing: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/package.dsv
+[11.437s] -- Up-to-date: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/ament_index/resource_index/packages/pid
+[11.437s] -- Up-to-date: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/cmake/pidConfig.cmake
+[11.437s] -- Up-to-date: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/cmake/pidConfig-version.cmake
+[11.437s] -- Up-to-date: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/package.xml
+[11.439s] Invoked command in '/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/build/pid' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/build/pid

@@ -1,0 +1,2 @@
+Invoking command in '/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/build/pid': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/build/pid -- -j20 -l20
+Invoked command in '/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/build/pid' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/build/pid -- -j20 -l20

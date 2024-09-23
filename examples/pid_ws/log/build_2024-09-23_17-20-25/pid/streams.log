@@ -1,0 +1,10 @@
+[0.010s] Invoking command in '/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/build/pid': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/build/pid -- -j20 -l20
+[0.054s] [ 50%] [32mBuilding CXX object CMakeFiles/pid.dir/src/pid.cpp.o[0m
+[0.198s] [01m[K/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/src/pid/src/pid.cpp:7:10:[m[K [01;31m[Kfatal error: [m[Kdls2_msgs/msg/BindStateMsg.h: No such file or directory
+[0.198s]     7 | #include [01;31m[K"dls2_msgs/msg/BindStateMsg.h"[m[K
+[0.198s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.198s] compilation terminated.
+[0.207s] gmake[2]: *** [CMakeFiles/pid.dir/build.make:76: CMakeFiles/pid.dir/src/pid.cpp.o] Error 1
+[0.207s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/pid.dir/all] Error 2
+[0.207s] gmake: *** [Makefile:146: all] Error 2
+[0.209s] Invoked command in '/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/build/pid' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/build/pid -- -j20 -l20

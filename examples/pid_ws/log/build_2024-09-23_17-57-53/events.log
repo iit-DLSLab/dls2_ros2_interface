@@ -1,0 +1,148 @@
+[0.000000] (-) TimerEvent: {}
+[0.000198] (pid) JobQueued: {'identifier': 'pid', 'dependencies': OrderedDict()}
+[0.000642] (pid) JobStarted: {'identifier': 'pid'}
+[0.011725] (pid) JobProgress: {'identifier': 'pid', 'progress': 'cmake'}
+[0.012600] (pid) JobProgress: {'identifier': 'pid', 'progress': 'build'}
+[0.013320] (pid) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/build/pid', '--', '-j20', '-l20'], 'cwd': '/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/build/pid', 'env': OrderedDict([('HOSTNAME', 'docker'), ('__GLX_VENDOR_LIBRARY_NAME', 'nvidia'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/integration_service/core/is-ros2-mix-generator/lib:/opt/integration_service/core/is-ros2/lib:/opt/integration_service/core/is-fastdds/lib:/opt/integration_service/core/is-mock/lib:/opt/integration_service/core/is-json-xtypes/lib:/opt/integration_service/core/is-core/lib:/opt/integration_service/dls2_ros2_bridge/msgs_ws/dls2_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/iit.local/mmarchitto'), ('OLDPWD', '/home/iit.local/mmarchitto/dls2_ros2_bridge/examples'), ('DOCKER', '1'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1021448021/bus'), ('COLCON_PREFIX_PATH', '/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install:/opt/integration_service/dls2_ros2_bridge/msgs_ws:/opt/integration_service/core'), ('ROS_DISTRO', 'humble'), ('__VK_LAYER_NV_optimus', 'NVIDIA_only'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/opt/integration_service/core/is-ros2-mix-generator/lib/x86_64-linux-gnu/pkgconfig:/opt/integration_service/core/is-ros2-mix-generator/lib/pkgconfig'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/integration_service/core/is-json-xtypes/bin:/opt/integration_service/core/is-core/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('QT_GRAPHICSSYSTEM', 'native'), ('XDG_RUNTIME_DIR', '/run/user/1021448021'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('__NV_PRIME_RENDER_OFFLOAD', '1'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid:/opt/integration_service/dls2_ros2_bridge/msgs_ws/dls2_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('DLS', '2'), ('DEFAULT_CONFIG', '/opt/integration_service/dls2_ros2_bridge/config'), ('PWD', '/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/build/pid'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/integration_service/dls2_ros2_bridge/msgs_ws/dls2_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid:/opt/integration_service/core/is-ros2-mix-generator:/opt/integration_service/core/is-ros2:/opt/integration_service/core/is-fastdds:/opt/integration_service/core/is-mock:/opt/integration_service/core/is-json-xtypes:/opt/integration_service/core/is-core:/opt/integration_service/dls2_ros2_bridge/msgs_ws/dls2_msgs:/opt/ros/humble')]), 'shell': False}
+[0.069601] (pid) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target pid\x1b[0m\n'}
+[0.092158] (pid) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/pid.dir/src/pid.cpp.o\x1b[0m\n'}
+[0.099852] (-) TimerEvent: {}
+[0.200151] (-) TimerEvent: {}
+[0.300453] (-) TimerEvent: {}
+[0.400761] (-) TimerEvent: {}
+[0.501180] (-) TimerEvent: {}
+[0.601560] (-) TimerEvent: {}
+[0.701880] (-) TimerEvent: {}
+[0.802165] (-) TimerEvent: {}
+[0.902490] (-) TimerEvent: {}
+[1.002896] (-) TimerEvent: {}
+[1.103230] (-) TimerEvent: {}
+[1.203574] (-) TimerEvent: {}
+[1.304039] (-) TimerEvent: {}
+[1.404384] (-) TimerEvent: {}
+[1.504941] (-) TimerEvent: {}
+[1.605423] (-) TimerEvent: {}
+[1.705864] (-) TimerEvent: {}
+[1.806244] (-) TimerEvent: {}
+[1.906752] (-) TimerEvent: {}
+[2.007236] (-) TimerEvent: {}
+[2.107653] (-) TimerEvent: {}
+[2.208173] (-) TimerEvent: {}
+[2.308532] (-) TimerEvent: {}
+[2.408904] (-) TimerEvent: {}
+[2.509244] (-) TimerEvent: {}
+[2.609600] (-) TimerEvent: {}
+[2.709993] (-) TimerEvent: {}
+[2.810317] (-) TimerEvent: {}
+[2.910691] (-) TimerEvent: {}
+[3.011027] (-) TimerEvent: {}
+[3.111398] (-) TimerEvent: {}
+[3.211873] (-) TimerEvent: {}
+[3.312272] (-) TimerEvent: {}
+[3.412654] (-) TimerEvent: {}
+[3.513123] (-) TimerEvent: {}
+[3.613411] (-) TimerEvent: {}
+[3.713722] (-) TimerEvent: {}
+[3.814068] (-) TimerEvent: {}
+[3.914413] (-) TimerEvent: {}
+[4.014793] (-) TimerEvent: {}
+[4.115115] (-) TimerEvent: {}
+[4.215473] (-) TimerEvent: {}
+[4.315790] (-) TimerEvent: {}
+[4.416146] (-) TimerEvent: {}
+[4.516411] (-) TimerEvent: {}
+[4.616673] (-) TimerEvent: {}
+[4.716985] (-) TimerEvent: {}
+[4.817345] (-) TimerEvent: {}
+[4.917622] (-) TimerEvent: {}
+[5.018046] (-) TimerEvent: {}
+[5.118362] (-) TimerEvent: {}
+[5.218676] (-) TimerEvent: {}
+[5.319028] (-) TimerEvent: {}
+[5.419345] (-) TimerEvent: {}
+[5.519677] (-) TimerEvent: {}
+[5.620059] (-) TimerEvent: {}
+[5.720453] (-) TimerEvent: {}
+[5.820810] (-) TimerEvent: {}
+[5.921351] (-) TimerEvent: {}
+[6.021814] (-) TimerEvent: {}
+[6.122248] (-) TimerEvent: {}
+[6.222729] (-) TimerEvent: {}
+[6.323021] (-) TimerEvent: {}
+[6.423424] (-) TimerEvent: {}
+[6.523744] (-) TimerEvent: {}
+[6.624092] (-) TimerEvent: {}
+[6.724452] (-) TimerEvent: {}
+[6.824749] (-) TimerEvent: {}
+[6.925100] (-) TimerEvent: {}
+[7.025389] (-) TimerEvent: {}
+[7.125801] (-) TimerEvent: {}
+[7.226083] (-) TimerEvent: {}
+[7.326497] (-) TimerEvent: {}
+[7.426794] (-) TimerEvent: {}
+[7.527193] (-) TimerEvent: {}
+[7.627508] (-) TimerEvent: {}
+[7.727800] (-) TimerEvent: {}
+[7.828116] (-) TimerEvent: {}
+[7.928427] (-) TimerEvent: {}
+[8.028721] (-) TimerEvent: {}
+[8.129291] (-) TimerEvent: {}
+[8.229696] (-) TimerEvent: {}
+[8.329958] (-) TimerEvent: {}
+[8.430198] (-) TimerEvent: {}
+[8.530482] (-) TimerEvent: {}
+[8.630822] (-) TimerEvent: {}
+[8.731101] (-) TimerEvent: {}
+[8.831356] (-) TimerEvent: {}
+[8.931628] (-) TimerEvent: {}
+[9.031965] (-) TimerEvent: {}
+[9.132325] (-) TimerEvent: {}
+[9.232746] (-) TimerEvent: {}
+[9.333146] (-) TimerEvent: {}
+[9.433418] (-) TimerEvent: {}
+[9.533735] (-) TimerEvent: {}
+[9.634015] (-) TimerEvent: {}
+[9.734314] (-) TimerEvent: {}
+[9.834665] (-) TimerEvent: {}
+[9.934990] (-) TimerEvent: {}
+[10.035259] (-) TimerEvent: {}
+[10.135621] (-) TimerEvent: {}
+[10.235918] (-) TimerEvent: {}
+[10.336348] (-) TimerEvent: {}
+[10.436642] (-) TimerEvent: {}
+[10.536937] (-) TimerEvent: {}
+[10.637424] (-) TimerEvent: {}
+[10.737860] (-) TimerEvent: {}
+[10.838359] (-) TimerEvent: {}
+[10.842899] (pid) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable pid\x1b[0m\n'}
+[10.938474] (-) TimerEvent: {}
+[11.038815] (-) TimerEvent: {}
+[11.139226] (-) TimerEvent: {}
+[11.239550] (-) TimerEvent: {}
+[11.339836] (-) TimerEvent: {}
+[11.358921] (pid) StdoutLine: {'line': b'[100%] Built target pid\n'}
+[11.375101] (pid) CommandEnded: {'returncode': 0}
+[11.406698] (pid) JobProgress: {'identifier': 'pid', 'progress': 'install'}
+[11.419257] (pid) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/build/pid'], 'cwd': '/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/build/pid', 'env': OrderedDict([('HOSTNAME', 'docker'), ('__GLX_VENDOR_LIBRARY_NAME', 'nvidia'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/integration_service/core/is-ros2-mix-generator/lib:/opt/integration_service/core/is-ros2/lib:/opt/integration_service/core/is-fastdds/lib:/opt/integration_service/core/is-mock/lib:/opt/integration_service/core/is-json-xtypes/lib:/opt/integration_service/core/is-core/lib:/opt/integration_service/dls2_ros2_bridge/msgs_ws/dls2_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/iit.local/mmarchitto'), ('OLDPWD', '/home/iit.local/mmarchitto/dls2_ros2_bridge/examples'), ('DOCKER', '1'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1021448021/bus'), ('COLCON_PREFIX_PATH', '/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install:/opt/integration_service/dls2_ros2_bridge/msgs_ws:/opt/integration_service/core'), ('ROS_DISTRO', 'humble'), ('__VK_LAYER_NV_optimus', 'NVIDIA_only'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/opt/integration_service/core/is-ros2-mix-generator/lib/x86_64-linux-gnu/pkgconfig:/opt/integration_service/core/is-ros2-mix-generator/lib/pkgconfig'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/integration_service/core/is-json-xtypes/bin:/opt/integration_service/core/is-core/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('QT_GRAPHICSSYSTEM', 'native'), ('XDG_RUNTIME_DIR', '/run/user/1021448021'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('__NV_PRIME_RENDER_OFFLOAD', '1'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid:/opt/integration_service/dls2_ros2_bridge/msgs_ws/dls2_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('DLS', '2'), ('DEFAULT_CONFIG', '/opt/integration_service/dls2_ros2_bridge/config'), ('PWD', '/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/build/pid'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/integration_service/dls2_ros2_bridge/msgs_ws/dls2_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid:/opt/integration_service/core/is-ros2-mix-generator:/opt/integration_service/core/is-ros2:/opt/integration_service/core/is-fastdds:/opt/integration_service/core/is-mock:/opt/integration_service/core/is-json-xtypes:/opt/integration_service/core/is-core:/opt/integration_service/dls2_ros2_bridge/msgs_ws/dls2_msgs:/opt/ros/humble')]), 'shell': False}
+[11.430010] (pid) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[11.430445] (pid) StdoutLine: {'line': b'-- Installing: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/lib/pid/pid\n'}
+[11.436850] (pid) StdoutLine: {'line': b'-- Set runtime path of "/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/lib/pid/pid" to ""\n'}
+[11.437052] (pid) StdoutLine: {'line': b'-- Up-to-date: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/ament_index/resource_index/package_run_dependencies/pid\n'}
+[11.437117] (pid) StdoutLine: {'line': b'-- Up-to-date: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/ament_index/resource_index/parent_prefix_path/pid\n'}
+[11.437230] (pid) StdoutLine: {'line': b'-- Up-to-date: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/environment/ament_prefix_path.sh\n'}
+[11.437482] (pid) StdoutLine: {'line': b'-- Up-to-date: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/environment/ament_prefix_path.dsv\n'}
+[11.437673] (pid) StdoutLine: {'line': b'-- Up-to-date: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/environment/path.sh\n'}
+[11.437758] (pid) StdoutLine: {'line': b'-- Up-to-date: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/environment/path.dsv\n'}
+[11.437811] (pid) StdoutLine: {'line': b'-- Up-to-date: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/local_setup.bash\n'}
+[11.437861] (pid) StdoutLine: {'line': b'-- Up-to-date: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/local_setup.sh\n'}
+[11.437910] (pid) StdoutLine: {'line': b'-- Up-to-date: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/local_setup.zsh\n'}
+[11.437958] (pid) StdoutLine: {'line': b'-- Up-to-date: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/local_setup.dsv\n'}
+[11.438004] (pid) StdoutLine: {'line': b'-- Installing: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/package.dsv\n'}
+[11.438051] (pid) StdoutLine: {'line': b'-- Up-to-date: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/ament_index/resource_index/packages/pid\n'}
+[11.438110] (pid) StdoutLine: {'line': b'-- Up-to-date: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/cmake/pidConfig.cmake\n'}
+[11.438158] (pid) StdoutLine: {'line': b'-- Up-to-date: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/cmake/pidConfig-version.cmake\n'}
+[11.438204] (pid) StdoutLine: {'line': b'-- Up-to-date: /home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/install/pid/share/pid/package.xml\n'}
+[11.439471] (pid) CommandEnded: {'returncode': 0}
+[11.439984] (-) TimerEvent: {}
+[11.488986] (pid) JobEnded: {'identifier': 'pid', 'rc': 0}
+[11.489806] (-) EventReactorShutdown: {}

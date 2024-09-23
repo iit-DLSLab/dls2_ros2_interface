@@ -1,0 +1,84 @@
+[0.000000] (-) TimerEvent: {}
+[0.000474] (pid) JobQueued: {'identifier': 'pid', 'dependencies': OrderedDict()}
+[0.000644] (pid) JobStarted: {'identifier': 'pid'}
+[0.006742] (pid) JobProgress: {'identifier': 'pid', 'progress': 'cmake'}
+[0.007087] (pid) JobProgress: {'identifier': 'pid', 'progress': 'build'}
+[0.007544] (pid) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/build/pid', '--', '-j20', '-l20'], 'cwd': '/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/build/pid', 'env': OrderedDict([('HOSTNAME', 'docker'), ('__GLX_VENDOR_LIBRARY_NAME', 'nvidia'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/integration_service/core/is-ros2-mix-generator/lib:/opt/integration_service/core/is-ros2/lib:/opt/integration_service/core/is-fastdds/lib:/opt/integration_service/core/is-mock/lib:/opt/integration_service/core/is-json-xtypes/lib:/opt/integration_service/core/is-core/lib:/opt/integration_service/dls2_ros2_bridge/msgs_ws/dls2_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/iit.local/mmarchitto'), ('OLDPWD', '/home/iit.local/mmarchitto/dls2_ros2_bridge/examples'), ('DOCKER', '1'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1021448021/bus'), ('COLCON_PREFIX_PATH', '/opt/integration_service/dls2_ros2_bridge/msgs_ws:/opt/integration_service/core'), ('ROS_DISTRO', 'humble'), ('__VK_LAYER_NV_optimus', 'NVIDIA_only'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/opt/integration_service/core/is-ros2-mix-generator/lib/x86_64-linux-gnu/pkgconfig:/opt/integration_service/core/is-ros2-mix-generator/lib/pkgconfig'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/integration_service/core/is-json-xtypes/bin:/opt/integration_service/core/is-core/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('QT_GRAPHICSSYSTEM', 'native'), ('XDG_RUNTIME_DIR', '/run/user/1021448021'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('__NV_PRIME_RENDER_OFFLOAD', '1'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/integration_service/dls2_ros2_bridge/msgs_ws/dls2_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('DLS', '2'), ('DEFAULT_CONFIG', '/opt/integration_service/dls2_ros2_bridge/config'), ('PWD', '/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/build/pid'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/integration_service/dls2_ros2_bridge/msgs_ws/dls2_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/integration_service/core/is-ros2-mix-generator:/opt/integration_service/core/is-ros2:/opt/integration_service/core/is-fastdds:/opt/integration_service/core/is-mock:/opt/integration_service/core/is-json-xtypes:/opt/integration_service/core/is-core:/opt/integration_service/dls2_ros2_bridge/msgs_ws/dls2_msgs:/opt/ros/humble')]), 'shell': False}
+[0.058160] (pid) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target pid\x1b[0m\n'}
+[0.079423] (pid) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/pid.dir/src/pid.cpp.o\x1b[0m\n'}
+[0.100181] (-) TimerEvent: {}
+[0.200748] (-) TimerEvent: {}
+[0.301071] (-) TimerEvent: {}
+[0.401566] (-) TimerEvent: {}
+[0.502036] (-) TimerEvent: {}
+[0.602664] (-) TimerEvent: {}
+[0.703076] (-) TimerEvent: {}
+[0.803533] (-) TimerEvent: {}
+[0.903918] (-) TimerEvent: {}
+[1.004227] (-) TimerEvent: {}
+[1.104559] (-) TimerEvent: {}
+[1.204828] (-) TimerEvent: {}
+[1.305139] (-) TimerEvent: {}
+[1.405426] (-) TimerEvent: {}
+[1.505717] (-) TimerEvent: {}
+[1.574818] (pid) StderrLine: {'line': b'\x1b[01m\x1b[K/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/src/pid/src/pid.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid Pid::run()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.574977] (pid) StderrLine: {'line': b'\x1b[01m\x1b[K/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/src/pid/src/pid.cpp:35:29:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kdes_q\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[1.575024] (pid) StderrLine: {'line': b'   35 |         for (int i = 0; i < \x1b[01;31m\x1b[Kdes_q\x1b[m\x1b[K.size(); i++)\n'}
+[1.575063] (pid) StderrLine: {'line': b'      |                             \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[1.575098] (pid) StderrLine: {'line': b'\x1b[01m\x1b[K/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/src/pid/src/pid.cpp:38:63:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno match for call to \xe2\x80\x98\x1b[01m\x1b[K(dls2_msgs::msg::TrajectoryGeneratorMsg_<std::allocator<void> >::_joints_position_type {aka std::array<double, 12>}) (int&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.575136] (pid) StderrLine: {'line': b'   38 |             des_tau_msg.torques = 15*(\x1b[01;31m\x1b[Ktraj_gen.joints_position(i)\x1b[m\x1b[K-blind_state.joints_position(i))\n'}
+[1.575173] (pid) StderrLine: {'line': b'      |                                       \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[1.575210] (pid) StderrLine: {'line': b'\x1b[01m\x1b[K/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/src/pid/src/pid.cpp:38:94:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno match for call to \xe2\x80\x98\x1b[01m\x1b[K(dls2_msgs::msg::BlindStateMsg_<std::allocator<void> >::_joints_position_type {aka std::array<double, 12>}) (int&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.575245] (pid) StderrLine: {'line': b'   38 |             des_tau_msg.torques = 15*(traj_gen.joints_position(i)-\x1b[01;31m\x1b[Kblind_state.joints_position(i)\x1b[m\x1b[K)\n'}
+[1.575279] (pid) StderrLine: {'line': b'      |                                                                   \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[1.575313] (pid) StderrLine: {'line': b'\x1b[01m\x1b[K/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/src/pid/src/pid.cpp:39:62:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno match for call to \xe2\x80\x98\x1b[01m\x1b[K(dls2_msgs::msg::TrajectoryGeneratorMsg_<std::allocator<void> >::_joints_velocity_type {aka std::array<double, 12>}) (int&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.575346] (pid) StderrLine: {'line': b'   39 |                                 + 3*(\x1b[01;31m\x1b[Ktraj_gen.joints_velocity(i)\x1b[m\x1b[K-blind_state.joints_velocity(i));\n'}
+[1.575378] (pid) StderrLine: {'line': b'      |                                      \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[1.575415] (pid) StderrLine: {'line': b'\x1b[01m\x1b[K/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/src/pid/src/pid.cpp:39:93:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno match for call to \xe2\x80\x98\x1b[01m\x1b[K(dls2_msgs::msg::BlindStateMsg_<std::allocator<void> >::_joints_velocity_type {aka std::array<double, 12>}) (int&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.575448] (pid) StderrLine: {'line': b'   39 |                                 + 3*(traj_gen.joints_velocity(i)-\x1b[01;31m\x1b[Kblind_state.joints_velocity(i)\x1b[m\x1b[K);\n'}
+[1.575478] (pid) StderrLine: {'line': b'      |                                                                  \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[1.576363] (pid) StderrLine: {'line': b'\x1b[01m\x1b[K/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/src/pid/src/pid.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid Pid::blind_state_callback(dls2_msgs::msg::BlindStateMsg_<std::allocator<void> >::SharedPtr) const\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.576406] (pid) StderrLine: {'line': b'\x1b[01m\x1b[K/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/src/pid/src/pid.cpp:47:24:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kpassing \xe2\x80\x98\x1b[01m\x1b[Kconst BlindStateMsg\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kconst dls2_msgs::msg::BlindStateMsg_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99} as \xe2\x80\x98\x1b[01m\x1b[Kthis\x1b[m\x1b[K\xe2\x80\x99 argument discards qualifiers [\x1b[01;31m\x1b[K-fpermissive\x1b[m\x1b[K]\n'}
+[1.576445] (pid) StderrLine: {'line': b'   47 |         blind_state = *\x1b[01;31m\x1b[Kmsg\x1b[m\x1b[K;\n'}
+[1.576479] (pid) StderrLine: {'line': b'      |                        \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[1.576511] (pid) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/integration_service/dls2_ros2_bridge/msgs_ws/dls2_msgs/include/dls2_msgs/dls2_msgs/msg/blind_state_msg.hpp:7\x1b[m\x1b[K,\n'}
+[1.576544] (pid) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/src/pid/src/pid.cpp:7\x1b[m\x1b[K:\n'}
+[1.576580] (pid) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/integration_service/dls2_ros2_bridge/msgs_ws/dls2_msgs/include/dls2_msgs/dls2_msgs/msg/detail/blind_state_msg__struct.hpp:32:8:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  in call to \xe2\x80\x98\x1b[01m\x1b[Kdls2_msgs::msg::BlindStateMsg_<std::allocator<void> >& dls2_msgs::msg::BlindStateMsg_<std::allocator<void> >::operator=(const dls2_msgs::msg::BlindStateMsg_<std::allocator<void> >&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.576614] (pid) StderrLine: {'line': b'   32 | struct \x1b[01;36m\x1b[KBlindStateMsg_\x1b[m\x1b[K\n'}
+[1.576646] (pid) StderrLine: {'line': b'      |        \x1b[01;36m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.577889] (pid) StderrLine: {'line': b'\x1b[01m\x1b[K/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/src/pid/src/pid.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid Pid::trajectory_generator_callback(dls2_msgs::msg::TrajectoryGeneratorMsg_<std::allocator<void> >::SharedPtr) const\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.577930] (pid) StderrLine: {'line': b'\x1b[01m\x1b[K/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/src/pid/src/pid.cpp:52:21:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kpassing \xe2\x80\x98\x1b[01m\x1b[Kconst TrajectoryGeneratorMsg\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kconst dls2_msgs::msg::TrajectoryGeneratorMsg_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99} as \xe2\x80\x98\x1b[01m\x1b[Kthis\x1b[m\x1b[K\xe2\x80\x99 argument discards qualifiers [\x1b[01;31m\x1b[K-fpermissive\x1b[m\x1b[K]\n'}
+[1.577965] (pid) StderrLine: {'line': b'   52 |         traj_gen = *\x1b[01;31m\x1b[Kmsg\x1b[m\x1b[K;\n'}
+[1.577998] (pid) StderrLine: {'line': b'      |                     \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[1.578029] (pid) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/integration_service/dls2_ros2_bridge/msgs_ws/dls2_msgs/include/dls2_msgs/dls2_msgs/msg/trajectory_generator_msg.hpp:7\x1b[m\x1b[K,\n'}
+[1.578067] (pid) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/iit.local/mmarchitto/dls2_ros2_bridge/examples/pid_ws/src/pid/src/pid.cpp:8\x1b[m\x1b[K:\n'}
+[1.578099] (pid) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/integration_service/dls2_ros2_bridge/msgs_ws/dls2_msgs/include/dls2_msgs/dls2_msgs/msg/detail/trajectory_generator_msg__struct.hpp:32:8:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  in call to \xe2\x80\x98\x1b[01m\x1b[Kdls2_msgs::msg::TrajectoryGeneratorMsg_<std::allocator<void> >& dls2_msgs::msg::TrajectoryGeneratorMsg_<std::allocator<void> >::operator=(const dls2_msgs::msg::TrajectoryGeneratorMsg_<std::allocator<void> >&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.578134] (pid) StderrLine: {'line': b'   32 | struct \x1b[01;36m\x1b[KTrajectoryGeneratorMsg_\x1b[m\x1b[K\n'}
+[1.578167] (pid) StderrLine: {'line': b'      |        \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.605852] (-) TimerEvent: {}
+[1.706136] (-) TimerEvent: {}
+[1.806407] (-) TimerEvent: {}
+[1.906693] (-) TimerEvent: {}
+[2.007021] (-) TimerEvent: {}
+[2.107316] (-) TimerEvent: {}
+[2.207634] (-) TimerEvent: {}
+[2.307930] (-) TimerEvent: {}
+[2.408220] (-) TimerEvent: {}
+[2.508469] (-) TimerEvent: {}
+[2.609275] (-) TimerEvent: {}
+[2.709541] (-) TimerEvent: {}
+[2.809859] (-) TimerEvent: {}
+[2.910127] (-) TimerEvent: {}
+[3.010402] (-) TimerEvent: {}
+[3.110674] (-) TimerEvent: {}
+[3.210954] (-) TimerEvent: {}
+[3.311457] (-) TimerEvent: {}
+[3.411882] (-) TimerEvent: {}
+[3.512395] (-) TimerEvent: {}
+[3.612813] (-) TimerEvent: {}
+[3.632606] (pid) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/pid.dir/build.make:76: CMakeFiles/pid.dir/src/pid.cpp.o] Error 1\n'}
+[3.632853] (pid) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/pid.dir/all] Error 2\n'}
+[3.633057] (pid) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[3.635086] (pid) CommandEnded: {'returncode': 2}
+[3.665544] (pid) JobEnded: {'identifier': 'pid', 'rc': 2}
+[3.676046] (-) EventReactorShutdown: {}
