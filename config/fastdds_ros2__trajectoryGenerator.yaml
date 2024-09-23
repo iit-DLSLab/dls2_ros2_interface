@@ -1,7 +1,7 @@
 types:
     idls:
         - >
-            #include <base_state.idl>
+            #include <trajectory_generator.idl>
 
     paths: [ "/opt/integration_service/dls2_msgs" ]
 
@@ -19,20 +19,20 @@ routes:
     ros2_to_dds: { from: ros2, to: dds }
 
 topics:
-    base_state_dds: {
-        type: "dls2_msgs/BaseStateMsg",
+    trajectory_generator_dds: {
+        type: "dls2_msgs/TrajectoryGenerator",
         route: ros2_to_dds,
         remap: {
-            dds: { type: BaseStateMsg, topic: base_state },
-            ros2: { topic: "dls2/base_state" }
+            dds: { type: TrajectoryGenerator, topic: trajectory_generator },
+            ros2: { topic: "dls2/trajectory_generator" }
         }
     }
 
-    base_state_ros2: {
-        type: "dls2_msgs/BaseStateMsg",
+    trajectory_generator_ros2: {
+        type: "dls2_msgs/TrajectoryGenerator",
         route: dds_to_ros2,
         remap: {
-            dds: { type: BaseStateMsg, topic: base_state },
-            ros2: { topic: "dls2/base_state" }
+            dds: { type: TrajectoryGenerator, topic: trajectory_generator },
+            ros2: { topic: "dls2/trajectory_generator" }
         }
     }

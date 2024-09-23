@@ -29,6 +29,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/BlindStateMsg.msg"
   "msg/BaseStateMsg.msg"
   "msg/ControlSignalMsg.msg"
+  "msg/TrajectoryGeneratorMsg.msg"
 )
 
 ament_package()
