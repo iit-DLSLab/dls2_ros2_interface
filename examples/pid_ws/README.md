@@ -38,7 +38,7 @@ Here, the name of the controller needs to be equal to the dds topic used in the 
 DLS2 is now ready to receive (and apply) the desired torques coming from the pid topic.
 
 ## Running the integration service
-Now we can launch the integration service. We need to bridge the _blind_state_ and _trajectory_generator_ topics from DLS2 to ROS2 and _/dls2/pid_ ROS2 topic to DLS2. Open 3 terminals attached to the the integration service image (see [here](../README.md#integration_service_procedure) for how to open such image). Then execute this command
+Now we can launch the integration service. We need to bridge the _blind_state_ and _trajectory_generator_ topics from DLS2 to ROS2 and _/dls2/pid_ ROS2 topic to DLS2. Open 3 terminals attached to the the integration service image (see [here](../../README.md#integration_service_procedure) for how to open such image). Then execute this command
 
         source /opt/integration_service/setup.bash
 
