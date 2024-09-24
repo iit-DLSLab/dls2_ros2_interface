@@ -16,21 +16,11 @@ systems:
 
 routes:
     dds_to_ros2: { from: dds, to: ros2 }
-    ros2_to_dds: { from: ros2, to: dds }
 
 topics:
     pid_dds: {
         type: "dls2_msgs/ControlSignalMsg",
         route: ros2_to_dds,
-        remap: {
-            dds: { type: ControlSignalMsg, topic: pid },
-            ros2: { topic: "dls2/pid" }
-        }
-    }
-
-    pid_ros2: {
-        type: "dls2_msgs/ControlSignalMsg",
-        route: dds_to_ros2,
         remap: {
             dds: { type: ControlSignalMsg, topic: pid },
             ros2: { topic: "dls2/pid" }
