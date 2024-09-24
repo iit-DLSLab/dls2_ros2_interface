@@ -15,8 +15,10 @@ This repositories also contains the ros2 messages corresponding to off-the-shelf
 
 # [Procedure to launch the integration service DLS2-ROS2](#integration_service_procedure)
 - pull the integration service image
+
     `docker pull server-harbor:80/dls2/dls2-integration_service-ros`
 - open the image
+
     `dls-docker.py --api run -f -nv -fx -e DLS=2 -ex server-harbor:80/dls2/dls2-integration_service-ros`
 - source the integration service and ROS2
     source /opt/integration_service/setup.bash
