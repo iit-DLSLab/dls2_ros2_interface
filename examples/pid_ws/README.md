@@ -2,10 +2,17 @@
 This is an example showing how to implemente a pid (actually pd) controller in ros2 interfacing with DLS2.
 
 # Compilation
-```
-cd dls2_ros2_bridge/examples/pid_ws
-colcon build
-```
+Fist, compile and source the dls2_msgs. For that, open a docker image with ros2, then
+
+    git pull git@gitlab.advr.iit.it:dls-lab/dls2_ros2_bridge.git
+    cd dls2_ros2_bridge/msgs_ws
+    colcon build
+    source install/setup.bash
+
+Now you can compile the pid
+
+    cd ../examples/pid_ws
+    colcon build
 
 # Usage
 In order to use the pid ros2 node, you need to use the server-harbor:80/dls2/dls2-framework (or dls2-devel) image, the server-harbor:80/dls2/dls2-integration_service-ros image and the image used to compile this package.
@@ -61,8 +68,8 @@ Now, each of the terminal will launch an integration service for a specific topi
     integration-service dls2_ros2_bridge/examples/pid_ws/fastdds_ros2__pid.yaml
     ```
 ## Runing the ROS2 pid controller
-We can now finally launch the ros2 pid. Open the image you have used to compile the ros2 package. Then
-
+We can now finally launch the ros2 pid. Open the image you have used to compile the ros2 package, then
+    source dls2_ros2_bridge/msgs_ws/install/setup.bash
     source dls2_ros2_bridge/examples/pid_ws/install/setup.bash
     ros2 run pid pid
 
