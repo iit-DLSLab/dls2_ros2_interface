@@ -29,8 +29,8 @@ This repositories also contains the ros2 messages corresponding to off-the-shelf
         `create_ros2_mix_files <name of the package where your message is>`
     - source the .mix files
         source /opt/integration_service/ros2_sh_ws/install/setup.bash
-    - create an .idl file corresponding to the .msg file of your ros2 message (e.g. [blind_state](https://gitlab.advr.iit.it/dls-lab/dls_messages/-/blob/master/idls/blind_state.idl))
-    - create a .yaml configuration file used by the integration service (e.g [blind_state](https://gitlab.advr.iit.it/dls-lab/dls2_ros2_bridge/-/blob/master/config/fastdds_ros2__blindState.yaml))
+    - create an .idl file corresponding to the .msg file of your ros2 message (e.g. [blind_state](https://github.com/iit-DLSLab/dls2/blob/main/modules/messages/idls/blind_state.idl))
+    - create a .yaml configuration file used by the integration service (e.g [blind_state](https://github.com/iit-DLSLab/dls2_ros2_bridge/blob/main/config/fastdds_ros2__blindState.yaml))
         - in the yaml file, the _paths_ field is the path to the folder containing your idl file
     - launch the integration service
 
