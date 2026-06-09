@@ -23,29 +23,29 @@ from typing import Iterable, List, Optional, Set, Tuple
 
 ROS_TO_IDL = {
     "bool": "boolean",
-    "byte": "octet",
+    "byte": "uint8",
     "char": "char",
     "float32": "float",
     "float64": "double",
     "int8": "int8",
-    "uint8": "octet",
-    "int16": "short",
-    "uint16": "unsigned short",
-    "int32": "long",
-    "uint32": "unsigned long",
-    "int64": "long long",
-    "uint64": "unsigned long long",
+    "uint8": "uint8",
+    "int16": "int16",
+    "uint16": "uint16",
+    "int32": "int32",
+    "uint32": "uint32",
+    "int64": "int64",
+    "uint64": "uint64",
     "string": "string",
     "wstring": "wstring",
 }
 
 PRIMITIVE_TYPES = set(ROS_TO_IDL)
 FIELD_RE = re.compile(
-    r"^(?P<type>[A-Za-z][A-Za-z0-9_/]*)(?P<array>\[(?:<=)?\d*\])?\s+"
-    r"(?P<name>[A-Za-z][A-Za-z0-9_]*)$"
+    r"^(?P<type>[A-Za-z][A-Za-z0-9_/]*(?:<=[0-9]+)?)(?P<array>\[(?:<=)?\d*\])?\s+"
+    r"(?P<name>[A-Za-z][A-Za-z0-9_]*)(?:\s+.+)?$"
 )
 CONST_RE = re.compile(
-    r"^(?P<type>[A-Za-z][A-Za-z0-9_/]*)(?P<array>\[(?:<=)?\d*\])?\s+"
+    r"^(?P<type>[A-Za-z][A-Za-z0-9_/]*(?:<=[0-9]+)?)(?P<array>\[(?:<=)?\d*\])?\s+"
     r"(?P<name>[A-Z][A-Z0-9_]*)\s*=\s*(?P<value>.+)$"
 )
 
@@ -234,12 +234,26 @@ def collect_includes(definition: MsgDefinition, current_package: str, current_ms
     return sorted(includes)
 
 
+def include_guard(package_name: str, msg_name: str) -> str:
+    return f"ROS2_INTERFACE_{package_name}_MSG_{msg_name}_IDL_".upper()
+
+
 def msg_to_idl_text(definition: MsgDefinition, package_name: str, msg_name: str) -> str:
     lines: List[str] = []
+    guard = include_guard(package_name, msg_name)
 
-    for include in collect_includes(definition, package_name, msg_name):
+    lines.extend(
+        [
+            f"#ifndef {guard}",
+            f"#define {guard}",
+            "",
+        ]
+    )
+
+    includes = collect_includes(definition, package_name, msg_name)
+    for include in includes:
         lines.append(f'#include "{include}"')
-    if lines:
+    if includes:
         lines.append("")
 
     lines.extend(
@@ -266,6 +280,8 @@ def msg_to_idl_text(definition: MsgDefinition, package_name: str, msg_name: str)
             "    };",
             "  };",
             "};",
+            "",
+            f"#endif // {guard}",
             "",
         ]
     )
