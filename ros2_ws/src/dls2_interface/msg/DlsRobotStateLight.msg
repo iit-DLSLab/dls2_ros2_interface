@@ -1,0 +1,7 @@
+dls2_interface/BlindStateLight blind_state
+dls2_interface/BaseStateLight base_state
+dls2_interface/WrenchLight base_wrench
+dls2_interface/Vec3[] feet_forces
+dls2_interface/FrictionConeList friction_cones
+uint32 locomotion_strategy
+dls2_interface/BatteryStatusLight battery_status

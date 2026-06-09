@@ -1,0 +1,2 @@
+dls2_interface/DlsHeader header
+bool emergency_stop

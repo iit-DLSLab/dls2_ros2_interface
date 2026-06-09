@@ -1,0 +1,38 @@
+uint8 BE_NONE=0
+uint8 BE_CROSS_L_UD=1
+uint8 BE_CROSS_L_LR=2
+uint8 BE_CROSS_R_UD=3
+uint8 BE_CROSS_R_LR=4
+uint8 BE_STICK_L_UD=5
+uint8 BE_STICK_L_LR=6
+uint8 BE_STICK_R_UD=7
+uint8 BE_STICK_R_LR=8
+uint8 BE_BUTTON_A=9
+uint8 BE_BUTTON_B=10
+uint8 BE_BUTTON_X=11
+uint8 BE_BUTTON_Y=12
+uint8 BE_BUTTON_PLUS=13
+uint8 BE_BUTTON_MINUS=14
+uint8 BE_BUTTON_START=15
+uint8 BE_BUTTON_BACK=16
+uint8 BE_BUMPER_LT=17
+uint8 BE_BUMPER_LB=18
+uint8 BE_BUMPER_L1=19
+uint8 BE_BUMPER_L2=20
+uint8 BE_BUMPER_L3=21
+uint8 BE_BUMPER_L4=22
+uint8 BE_BUMPER_RT=23
+uint8 BE_BUMPER_RB=24
+uint8 BE_BUMPER_R1=25
+uint8 BE_BUMPER_R2=26
+uint8 BE_BUMPER_R3=27
+uint8 BE_BUMPER_R4=28
+
+
+# header
+uint32 sequence_id
+float64 timestamp
+
+# data
+uint8 button
+float64 value

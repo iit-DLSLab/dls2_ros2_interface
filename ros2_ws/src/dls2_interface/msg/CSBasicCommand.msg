@@ -1,0 +1,5 @@
+dls2_interface/DlsHeader header
+uint32 autonomy_level
+uint32 locomotion_strategy
+uint32 control_strategy
+bool enable

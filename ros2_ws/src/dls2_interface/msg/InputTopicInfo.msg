@@ -1,0 +1,4 @@
+string topic_name
+float64 current_freq
+float64 desired_freq
+uint32 missed_sequence_ids
