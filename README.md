@@ -60,7 +60,7 @@ Override the ROS distro or server file if needed:
 ```bash
 export DLS_ROS_DISTRO=humble
 export DLS_SERVERS_PATH=/path/to/servers.yaml
-source install/scripts/setup_ros2_for_dls2.bash
+source src/dls2_interface/scripts/setup_ros2_for_dls2.bash
 ```
 
 If the server file is not available, the script falls back to:
@@ -104,11 +104,11 @@ To use custom ROS2 messages, do so you need to generate idl from .msg file:
 
     To convert all messages in the package:
 
-    `python3 install/dls2_interface/share/dls2_interface/scripts/msg_to_idl_no_comments.py <path_to_msg_folder> -o ./idls`
+    `python3 src/dls2_interface/scripts/msg_to_idl_no_comments.py <path_to_msg_folder> -o ./idls`
 
     If the package name cannot be inferred from `package.xml`, pass it explicitly:
 
-    `python3 install/dls2_interface/share/dls2_interface/scripts/msg_to_idl_no_comments.py <path_to_msg_folder> -o ./idls --package-name package_name`
+    `python3 src/dls2_interface/scripts/msg_to_idl_no_comments.py <path_to_msg_folder> -o ./idls --package-name package_name`
 
 ## Use DLS2 message in ROS2 (.idl to .msg)
 Off-the-shelf DLS2 messages are already supported in the dls2_inteface ROS2 package.
