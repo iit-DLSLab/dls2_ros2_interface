@@ -13,60 +13,11 @@ find_package(ament_cmake REQUIRED)
 
 find_package(rosidl_default_generators REQUIRED)
 
-rosidl_generate_interfaces(${PROJECT_NAME}
-"msg/ArmState.msg"
-"msg/ArmTrajectoryGenerator.msg"
-"msg/Attitude.msg"
-"msg/BaseReference.msg"
-"msg/BaseState.msg"
-"msg/BaseStateLight.msg"
-"msg/BatteryStatus.msg"
-"msg/BatteryStatusLight.msg"
-"msg/BlindState.msg"
-"msg/BlindStateLight.msg"
-"msg/Bool.msg"
-"msg/ButtonEvent.msg"
-"msg/CommandCall.msg"
-"msg/ControllerCommand.msg"
-"msg/ControlSignal.msg"
-"msg/CSBasicCommand.msg"
-"msg/CSEmergency.msg"
-"msg/DesiredArmTorques.msg"
-"msg/DesiredTorques.msg"
-"msg/DlsEvents.msg"
-"msg/DlsHeader.msg"
-"msg/DlsRobotStateLight.msg"
-"msg/DlsStatus.msg"
-"msg/Double.msg"
-"msg/EventLog.msg"
-"msg/FeetReference.msg"
-"msg/FrictionConeList.msg"
-"msg/Imu.msg"
-"msg/InputTopicInfo.msg"
-"msg/JointStates.msg"
-"msg/JointStatesLight.msg"
-"msg/LegsPose.msg"
-"msg/NavigationReference.msg"
-"msg/ParamServer.msg"
-"msg/Pose.msg"
-"msg/Position2D.msg"
-"msg/ProcessStatus.msg"
-"msg/ProcessStatusLight.msg"
-"msg/ReferenceLight.msg"
-"msg/ReferencePath.msg"
-"msg/Screw.msg"
-"msg/SensorFusion.msg"
-"msg/StanceStatus.msg"
-"msg/StateMachineMonitor.msg"
-"msg/StayOutZones.msg"
-"msg/String.msg"
-"msg/TargetPosition.msg"
-"msg/TrajectoryGenerator.msg"
-"msg/Vec3.msg"
-"msg/Vicon.msg"
-"msg/WrenchLight.msg"
-"msg/Zone.msg"
-)
+# generate all the ros messages in the msg folder, without having to list them one by one
+file(GLOB msg_files RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" "msg/*.msg")
+list(SORT msg_files)
+rosidl_generate_interfaces(${PROJECT_NAME} ${msg_files})
+
 
 ament_export_dependencies(rosidl_default_runtime)
 
