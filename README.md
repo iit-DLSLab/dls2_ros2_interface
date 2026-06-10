@@ -39,8 +39,6 @@ ros2 interface show dls2_interface/msg/BaseState
 ## Configure ROS 2 for DLS2
 Supported ROS2 middleware: **FastDDS**.
 
-Use the setup script before running ROS 2 nodes or CLI commands that need to communicate with DLS2:
-
 ## Network 
 To interface ROS2 with DLS2 and viceversa you have two ways:
 
@@ -82,7 +80,7 @@ ros2 daemon start
 ```
 These commands:
 - set FastDDS as ROS2 middleware
-- set Discovery Server as discovery mechanism for ROS2, setting the ips and ports used by DLS2. Be aware that the order **MATTERS** and it has to follow the one you set in the servers.yaml configuration file (see [here](modules/ddscom/include/dls2/util/messaging/servers.yaml)).
+- set Discovery Server as discovery mechanism for ROS2, setting the ips and ports used by DLS2. Be aware that the order **MATTERS** and it has to follow the one you set in the servers.yaml configuration file (see [here](https://github.com/iit-DLSLab/dls2/blob/main/modules/ddscom/include/dls2/util/messaging/servers.yaml)).
 - set the ROS client to SUPER_CLIENT. This is only needed for the ros2 CLI. You can set it to FALSE if you don't want to use the ros2 CLI.
 - restart the ros2 daemon, which manages the cache of nodes, topics, and services. It makes ros2 CLI commands faster, but you need to stop and restart it to update it (for example, if you change the network, the discovery server, or the ROS_SUPER_CLIENT). Instead of stop and restart, you can use the ros2 CLI with the '--no-daemon' option.
 
@@ -95,7 +93,7 @@ DLS2 usually prepends `rt/` automatically, so use matching topic names on both s
 
 
 ## Use ROS2 message in DLS2 (.msg to .idl)
-Off-the-shelf ROS2 messages are supported by default in DLS2 (TBC).
+Off-the-shelf ROS2 messages are supported by default in DLS2.
 
 To use custom ROS2 messages, do so you need to generate idl from .msg file:
 1. Execute the command
@@ -106,17 +104,33 @@ To use custom ROS2 messages, do so you need to generate idl from .msg file:
 
     To convert all messages in the package:
 
-    `python3 install/dls2_interface/share/dls2_interface/scripts/msg_to_idl_no_comments.py src/dls2_interface/msg -o ./idls`
+    `python3 install/dls2_interface/share/dls2_interface/scripts/msg_to_idl_no_comments.py <path_to_msg_folder> -o ./idls`
 
     If the package name cannot be inferred from `package.xml`, pass it explicitly:
 
-    `python3 install/dls2_interface/share/dls2_interface/scripts/msg_to_idl_no_comments.py path/to/msg -o ./idls --package-name package_name`
+    `python3 install/dls2_interface/share/dls2_interface/scripts/msg_to_idl_no_comments.py <path_to_msg_folder> -o ./idls --package-name package_name`
 
 ## Use DLS2 message in ROS2 (.idl to .msg)
 Off-the-shelf DLS2 messages are already supported in the dls2_inteface ROS2 package.
 
-For custom DLS2 idl, use the [`idl_to_msg.py`](modules/messages/script/idl_to_msg.py) tool to convert an idl to a msg. E.g.
+For custom DLS2 idl, please make sure that the idl file has namespace dls2_interface and msg like
 
-    `python3 idl_to_msg.py ../idls/BaseState.idl -o ./ `
+```
+module dls2_interface
+{
+  module msg
+  {
+    struct ExampleMsg
+    {
+      unsigned long sequence_id;
+      double timestamp;
+    };
+  };
+};
+```
+
+Then use the [`idl_to_msg.py`](modules/messages/script/idl_to_msg.py) tool to convert an idl to a msg. E.g.
+
+    python3 idl_to_msg.py ../idls/BaseState.idl -o ./ 
 
 Then copy the .msg inside the dls2_interface/msg, add the message in the rosidl_generate_interfaces of the CMakeLists.txt and build the dls2_interface. Finally `source install/setup.bash`.
