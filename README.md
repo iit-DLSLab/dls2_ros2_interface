@@ -15,7 +15,7 @@ The `dls2_interface` package also provides scripts for:
 
 ## Requirements
 
-- ROS 2, default distro: `jazzy`
+- ROS 2, default distro: `jazzy` (humble is not recently tested but it should work too)
 - FastDDS ROS middleware: `rmw_fastrtps_cpp`
 - DLS2 installed, or a readable DLS discovery-server YAML file (otherwise fallback to default setting is happening)
 
@@ -95,27 +95,33 @@ DLS2 usually prepends `rt/` automatically, so use matching topic names on both s
 ## Use ROS2 message in DLS2 (.msg to .idl)
 Off-the-shelf ROS2 messages are supported by default in DLS2.
 
-To use custom ROS2 messages, do so you need to generate idl from .msg file:
-1. Execute the command
+To use custom ROS2 messages, do so you need to generate idl from .msg file by executing the command
 
-    `python3 src/dls2_interface/scripts/msg_to_idl_no_comments.py src/dls2_interface/msg/message_name.msg -o ./idls`
+```bash
+python3 src/dls2_interface/scripts/msg_to_idl_no_comments.py src/dls2_interface/msg/message_name.msg -o ./idls
+```
 
-    This generates IDL directly from the `.msg` file without comments and without `@verbatim` annotations, avoiding FastDDSGen compilation issues seen with `rosidl translate`.
+This generates IDL directly from the .msg file without comments and without \@verbatim annotations, avoiding FastDDSGen compilation issues seen with `rosidl translate`.
 
-    To convert all messages in the package:
+To convert all messages in the package
 
-    `python3 src/dls2_interface/scripts/msg_to_idl_no_comments.py <path_to_msg_folder> -o ./idls`
+```bash
+python3 src/dls2_interface/scripts/msg_to_idl_no_comments.py <path_to_msg_folder> -o ./idls
+```
 
-    If the package name cannot be inferred from `package.xml`, pass it explicitly:
+If the package name cannot be inferred from `package.xml`, pass it explicitly:
 
-    `python3 src/dls2_interface/scripts/msg_to_idl_no_comments.py <path_to_msg_folder> -o ./idls --package-name package_name`
+```bash
+python3 src/dls2_interface/scripts/msg_to_idl_no_comments.py <path_to_msg_folder> -o ./idls --package-name package_name
+```
+
 
 ## Use DLS2 message in ROS2 (.idl to .msg)
 Off-the-shelf DLS2 messages are already supported in the dls2_inteface ROS2 package.
 
 For custom DLS2 idl, please make sure that the idl file has namespace dls2_interface and msg like
 
-```
+```bash
 module dls2_interface
 {
   module msg
@@ -129,8 +135,8 @@ module dls2_interface
 };
 ```
 
-Then use the [`idl_to_msg.py`](modules/messages/script/idl_to_msg.py) tool to convert an idl to a msg. E.g.
+Then use the `idl_to_msg.py` tool to convert an idl to a msg. E.g.
 
-    python3 idl_to_msg.py ../idls/BaseState.idl -o ./ 
+    python3 src/dls2_interface/scripts/idl_to_msg.py <path_to_idl> -o ./ 
 
 Then copy the .msg inside the dls2_interface/msg, add the message in the rosidl_generate_interfaces of the CMakeLists.txt and build the dls2_interface. Finally `source install/setup.bash`.
