@@ -44,7 +44,7 @@ To interface ROS2 with DLS2 and viceversa you have two ways:
 
 ### Fast way
 
-    source install/scripts/setup_ros2_for_dls2.bash
+    source install/dls2_interface/share/dls2_interface/scripts/setup_ros2_for_dls2.bash
 
 By default the script:
 
