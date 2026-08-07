@@ -50,7 +50,7 @@ By default the script:
 
 - sources `/opt/ros/jazzy/setup.bash`
 - sets `RMW_IMPLEMENTATION=rmw_fastrtps_cpp`
-- reads DLS discovery servers from `/usr/include/dls2/util/messaging/servers.yaml`
+- reads DLS discovery servers from `/opt/dls2/include/dls2/util/messaging/servers.yaml`
 - exports `ROS_DISCOVERY_SERVER`
 - exports `ROS_SUPER_CLIENT=TRUE`
 - restarts the ROS 2 daemon
