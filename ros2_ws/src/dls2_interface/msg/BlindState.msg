@@ -14,3 +14,4 @@ float64[] joints_effort
 float64[] joints_temperature
 bool[] feet_contact
 float64[] current_feet_positions
+float64[] joints_current
