@@ -7,16 +7,13 @@ module dls2_interface {
 	module msg {
 		struct ReferenceLight
 		{
-			sequence<double> joint_torques;
 			dls2_interface::msg::JointStatesLight joints_state;
 			
+			sequence<dls2_interface::msg::Vec3> feet_position;
 			sequence<dls2_interface::msg::Vec3> feet_forces;
 
 			dls2_interface::msg::Pose base_pose;
 			dls2_interface::msg::Screw base_velocity;
-
-			sequence<dls2_interface::msg::Pose> traj_poses;
-			sequence<dls2_interface::msg::Screw> traj_screws;
 		};
 	};
 };

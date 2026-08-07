@@ -14,6 +14,7 @@ module dls2_interface {
 
 			dls2_interface::msg::WrenchLight base_wrench;
 
+			sequence<dls2_interface::msg::Vec3> feet_position;
 			sequence<dls2_interface::msg::Vec3> feet_forces;
 			dls2_interface::msg::FrictionConeList friction_cones;
 
