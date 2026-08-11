@@ -19,6 +19,7 @@ module dls2_interface
       sequence<double> joints_temperature;
       sequence<boolean> feet_contact;
       sequence<double> current_feet_positions;
+			sequence<double> joints_current;
     };
   };
 };
