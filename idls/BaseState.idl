@@ -21,8 +21,6 @@ module dls2_interface
       // base acceleration
       dls2_interface::msg::Screw acceleration;
 
-      // stance status
-      sequence<boolean> stance_status;
     };
   };
 };
