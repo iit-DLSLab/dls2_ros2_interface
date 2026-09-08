@@ -9,3 +9,6 @@ dls2_interface/Screw velocity
 
 # base acceleration
 dls2_interface/Screw acceleration
+
+# stance status
+bool[] stance_status
