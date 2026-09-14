@@ -21,7 +21,7 @@ if ! command -v ros2 >/dev/null 2>&1; then
 	exit 1
 fi
 
-servers_path="${DLS_SERVERS_PATH:-/usr/include/dls2/util/messaging/servers.yaml}"
+servers_path="${DLS_SERVERS_PATH:-/opt/dls2/include/dls2/util/messaging/servers.yaml}"
 
 echo "Reading DLS servers from: ${servers_path}"
 
