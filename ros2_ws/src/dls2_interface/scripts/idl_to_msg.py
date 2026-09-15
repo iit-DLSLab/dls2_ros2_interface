@@ -695,7 +695,13 @@ def main(argv: List[str]) -> int:
         action="store_true",
         help="List successfully generated files.",
     )
+    ap.add_argument(
+        "--strict",
+        action="store_true",
+        help="Fail on conversion errors or inputs that generate no messages.",
+    )
     args = ap.parse_args(argv)
+    convert = convert_idl_file if args.strict else convert_idl_file_safe
 
     inp = Path(args.input).expanduser().resolve()
     out_dir = Path(args.output_dir).expanduser().resolve()
@@ -705,9 +711,11 @@ def main(argv: List[str]) -> int:
         if inp.suffix.lower() != ".idl":
             print(f"Error: input file must end with .idl: {inp}", file=sys.stderr)
             return 2
-        written = convert_idl_file_safe(inp, out_dir)
+        written = convert(inp, out_dir)
         if not written:
             print(f"No structs found in {inp} (nothing generated).")
+            if args.strict:
+                return 1
         else:
             if args.verbose:
                 for p in written:
@@ -721,7 +729,11 @@ def main(argv: List[str]) -> int:
             return 2
         all_written: List[Path] = []
         for f in idl_files:
-            all_written.extend(convert_idl_file_safe(f, out_dir))
+            written = convert(f, out_dir)
+            if args.strict and not written:
+                print(f"No structs found in {f} (nothing generated).", file=sys.stderr)
+                return 1
+            all_written.extend(written)
         if not all_written:
             print(f"No structs found in any .idl files under {inp} (nothing generated).")
         else:
