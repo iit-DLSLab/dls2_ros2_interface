@@ -6,3 +6,4 @@ float64 timestamp
 
 # data
 bool[] stance_status
+float64[] estimated_grfs
