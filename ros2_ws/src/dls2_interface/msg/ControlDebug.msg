@@ -16,3 +16,10 @@ uint32 contacts_per_step
 float64 terrain_height_world
 float64 terrain_roll
 float64 terrain_pitch
+
+# Calculated joint torques in Nm with full MPC GRF, before enable blending, indexed like joints_position.
+float64[] current_desired_torques
+
+# Measured controller inputs after simulated noise and drift.
+float64[3] dp
+float64[3] omega
