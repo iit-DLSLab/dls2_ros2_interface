@@ -64,20 +64,20 @@ else
 	)"
 fi
 
-if [ -z "${ros_discovery_server}" ]; then
+if [ "${ros_discovery_server}" = true ]; then
+	echo "Setting Middleware to Fast RTPS"
+	export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
+
+	echo "exporting ROS_DISCOVERY_SERVER=${ros_discovery_server}"
+	export ROS_DISCOVERY_SERVER="${ros_discovery_server}"
+
+	echo "exporting ROS_SUPER_CLIENT=TRUE"
+	export ROS_SUPER_CLIENT=TRUE
+
+	echo "Restarting ROS 2 daemon..."
+	ros2 daemon stop
+	ros2 daemon start
+else
 	echo "No active discovery servers found in: ${servers_path}" >&2
-	exit 1
 fi
 
-echo "Setting Middleware to Fast RTPS"
-export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
-
-echo "exporting ROS_DISCOVERY_SERVER=${ros_discovery_server}"
-export ROS_DISCOVERY_SERVER="${ros_discovery_server}"
-
-echo "exporting ROS_SUPER_CLIENT=TRUE"
-export ROS_SUPER_CLIENT=TRUE
-
-echo "Restarting ROS 2 daemon..."
-ros2 daemon stop
-ros2 daemon start
