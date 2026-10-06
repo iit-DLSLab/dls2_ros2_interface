@@ -1,6 +1,14 @@
 #!/usr/bin/env bash
 
+# This script is meant to be sourced: never call a bare `exit`, it would close
+# the caller's shell. `return` works when sourced, `exit` when executed.
+
 echo "Setup ROS2 environment for DLS2"
+
+if [ -n "${CONDA_PREFIX:-}" ]; then
+	echo "Warning: conda environment '${CONDA_DEFAULT_ENV:-${CONDA_PREFIX}}' is active." >&2
+	echo "ROS 2 tools may use conda's python instead of the system one; run 'conda deactivate' if ros2 fails." >&2
+fi
 
 ros_distro="${DLS_ROS_DISTRO:-jazzy}"
 ros_prefix="/opt/ros/${ros_distro}"
@@ -12,15 +20,16 @@ elif [ -r "${ros_prefix}/setup.sh" ]; then
 	source "${ros_prefix}/setup.sh"
 else
 	echo "Cannot read ROS 2 setup file in: ${ros_prefix}" >&2
-	exit 1
+	return 1 2>/dev/null || exit 1
 fi
 
 if ! command -v ros2 >/dev/null 2>&1; then
 	echo "ros2 command not found after sourcing ${ros_prefix}/setup.*" >&2
 	echo "Check that ROS 2 ${ros_distro} is installed and provides ${ros_prefix}/bin/ros2." >&2
-	exit 1
+	return 1 2>/dev/null || exit 1
 fi
 
+ros_discovery_server=""
 servers_path="${DLS_SERVERS_PATH:-/opt/dls2/include/dls2/util/messaging/servers.yaml}"
 
 echo "Reading DLS servers from: ${servers_path}"
@@ -64,7 +73,7 @@ else
 	)"
 fi
 
-if [ "${ros_discovery_server}" = true ]; then
+if [ -n "${ros_discovery_server}" ]; then
 	echo "Setting Middleware to Fast RTPS"
 	export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
 
