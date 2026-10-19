@@ -7,6 +7,8 @@ dls2_interface/Vec3 desired_linear_velocity
 dls2_interface/Vec3 desired_angular_velocity
 dls2_interface/Vec3[] current_feet_positions_world
 dls2_interface/Vec3[] estimated_grf_world
+
+# One MPC interval: base at k+1; feet, nominal GRF and contacts at k.
 dls2_interface/Vec3[] predicted_base_positions
 dls2_interface/Vec3[] predicted_feet_positions
 dls2_interface/Vec3[] predicted_grf_horizon
@@ -26,3 +28,12 @@ float64[3] omega
 
 # Riccati feedback K (x - x0) added to the MPC GRF, in N, world frame, per leg; zero when not applied.
 dls2_interface/Vec3[] riccati_grf_world
+
+# Filtered Fmax in N at MPC stage zero, in robotlib leg order.
+float64[4] fmax
+
+# Viscous + Coulomb compensation in Nm, before torque limits/blending, indexed like joints_position; zero when not applied.
+float64[] friction_torques
+
+# Acados time_tot in seconds for the last completed MPC solve; zero before the first solve.
+float64 mpc_solve_time_s
