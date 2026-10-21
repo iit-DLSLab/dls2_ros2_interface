@@ -16,4 +16,5 @@ bool[] feet_contact
 float64[] current_feet_positions
 float64[] motors_current
 uint32[] motors_status_word
+string[] motors_fault_info
 float64 trunk_temperature
