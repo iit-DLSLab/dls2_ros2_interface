@@ -1,3 +1,4 @@
 dls2_interface/Pose pose
 dls2_interface/Screw velocity
 dls2_interface/Screw acceleration
+bool[] stance_status

@@ -19,6 +19,9 @@ float64 terrain_height_world
 float64 terrain_roll
 float64 terrain_pitch
 
+# Friction coefficient used by the MPC.
+float64 mu
+
 # Calculated joint torques in Nm with full MPC GRF, before enable blending, indexed like joints_position.
 float64[] current_desired_torques
 
@@ -37,3 +40,9 @@ float64[] friction_torques
 
 # Acados time_tot in seconds for the last completed MPC solve; zero before the first solve.
 float64 mpc_solve_time_s
+
+# Whole-body CoM in m, world frame, from the measured base pose and joints (CoM offset included).
+dls2_interface/Vec3 com_position_world
+
+# MPC CoM in m, world frame, at the same stage as predicted_base_positions; equals com_position_world without an MPC prediction.
+dls2_interface/Vec3 desired_com_position_world

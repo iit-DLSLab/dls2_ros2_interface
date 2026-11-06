@@ -4,5 +4,8 @@ dls2_interface/WrenchLight base_wrench
 dls2_interface/Vec3[] feet_position
 dls2_interface/Vec3[] feet_forces
 dls2_interface/FrictionConeList friction_cones
+
+# Measured whole-body CoM in base frame.
+dls2_interface/Vec3 com_position
 uint32 locomotion_strategy
 dls2_interface/BatteryStatusLight battery_status

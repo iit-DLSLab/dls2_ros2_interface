@@ -4,3 +4,6 @@ float64[] joints_acceleration
 float64[] joints_temperature
 float64[] motors_current
 float64[] joints_effort
+uint32[] motors_status_word
+string[] motors_fault_info
+float64 trunk_temperature
