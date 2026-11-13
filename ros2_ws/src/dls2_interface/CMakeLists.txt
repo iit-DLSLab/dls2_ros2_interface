@@ -12,14 +12,18 @@ find_package(ament_cmake REQUIRED)
 # find_package(<dependency> REQUIRED)
 
 find_package(rosidl_default_generators REQUIRED)
+# ROS2 message packages used as field types (e.g. DlsStatus -> action_msgs/GoalStatusArray)
+find_package(action_msgs REQUIRED)
 
 # generate all the ros messages in the msg folder, without having to list them one by one
 file(GLOB msg_files RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" "msg/*.msg")
 list(SORT msg_files)
-rosidl_generate_interfaces(${PROJECT_NAME} ${msg_files})
+rosidl_generate_interfaces(${PROJECT_NAME} ${msg_files}
+  DEPENDENCIES action_msgs
+)
 
 
-ament_export_dependencies(rosidl_default_runtime)
+ament_export_dependencies(rosidl_default_runtime action_msgs)
 
 install(DIRECTORY scripts
   DESTINATION share/${PROJECT_NAME}
