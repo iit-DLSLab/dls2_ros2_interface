@@ -12,3 +12,4 @@ float64[3] angular_velocity
 float64[9] angular_velocity_covariance
 float64[3] linear_acceleration
 float64[9] linear_acceleration_covariance
+float64[3] magnetic_field

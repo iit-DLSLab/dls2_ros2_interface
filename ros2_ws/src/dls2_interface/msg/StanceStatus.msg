@@ -7,8 +7,8 @@ float64 timestamp
 # data
 bool[] stance_status
 
-# Estimated GRFs in base frame, flattened as [Fx, Fy, Fz] per limb id.
-float64[] estimated_grfs
+# Estimated GRFs in base frame, one Vec3 per limb id.
+dls2_interface/Vec3[] estimated_grfs
 
 # Filtered joint accelerations used by the GRF estimator [rad/s^2].
 float64[] joints_acceleration
