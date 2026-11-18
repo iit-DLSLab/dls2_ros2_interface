@@ -49,10 +49,11 @@ To interface ROS2 with DLS2 and viceversa you have two ways:
 By default the script:
 
 - sources `/opt/ros/jazzy/setup.bash`
-- sets `RMW_IMPLEMENTATION=rmw_fastrtps_cpp`
+- sets `RMW_IMPLEMENTATION=rmw_fastrtps_cpp` (pass another middleware as the first argument, e.g. `source .../setup_ros2_for_dls2.bash rmw_cyclonedds_cpp`)
 - reads DLS discovery servers from `/opt/dls2/include/dls2/util/messaging/servers.yaml`
 - exports `ROS_DISCOVERY_SERVER`
 - exports `ROS_SUPER_CLIENT=TRUE`
+  (with `rmw_zenoh_cpp` the server file is skipped and both `ROS_DISCOVERY_SERVER` and `ROS_SUPER_CLIENT` are unset)
 - restarts the ROS 2 daemon
 
 Override the ROS distro or server file if needed:
