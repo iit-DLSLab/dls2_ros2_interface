@@ -117,7 +117,7 @@ if [ -n "${ros_discovery_server}" ]; then
 	export ROS_DISCOVERY_SERVER="${ros_discovery_server}"
 
 	echo "exporting ROS_SUPER_CLIENT=TRUE"
-	export ROS_SUPER_CLIENT=TRUE
+	export ROS_SUPER_CLIENT=FALSE
 
 	echo "Restarting ROS 2 daemon..."
 	ros2 daemon stop
